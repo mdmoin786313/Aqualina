@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <script src="main.js"></script>
+</head>
+<body>
+<div class="header" id="header">
+  <a href="">Aqualina</a>
+  <div class="header_links">
+    <a href="">Home</a>
+    <a href="">Facilities</a>
+    <a href="">Rooms</a>
+    <a href="">Resort</a>
+    <a href="">Premium</a>
+    <a href="">Login</a>
+    <a href="">Book Now!</a>
+  </div>
+</div>
+<script>
+  window.onscroll = function () {
+    var pagePos = window.pageYOffset;
+    if(pagePos > 90) {
+      document.getElementById("header").style.background = "rgba(0,0,0,0.85)";
+    } else {
+      document.getElementById("header").style.background = "transparent";
+    }
+  }
+</script>
+<div class="back1">
+  <div class="back1_content">
+    <h1>A Place You'd Like To Stay Forever!</h1>
+    <h3 style="font-weight: lighter">Hotel. Resort. Beach. Everything You Need To Stay Here Forever.</h3>
+    <a href="">Know More!</a>
+  </div>
+</div>
+<div class="back2">
+  <h1>Facilities</h1>
+  <table cellpadding="25" align="center">
+    <tr>
+      <td><div class="back2_image"><div class="img1"></div></div><h4>Seafacing Rooms</h4></td>
+      <td><div class="back2_image"><div class="img2"></div></div><h4>Beach</h4></td>
+      <td><div class="back2_image"><div class="img3"></div></div><h4>Resort</h4></td>
+    </tr>
+    <tr>
+      <td><div class="back2_image"><div class="img4"></div></div><h4>Private Vehicles</h4></td>
+      <td><div class="back2_image"><div class="img5"></div></div><h4>Island Hotel</h4></td>
+      <td><div class="back2_image"><div class="img6"></div></div><h4>Business Centre</h4></td>
+    </tr>
+  </table>
+</div>
+<div class="back3">
+    <img src="images/room1.jpg" class="ss_img">
+    <img src="images/room2.jpg" class="ss_img">
+    <img src="images/room3.jpg" class="ss_img">
+    <img src="images/room4.jpg" class="ss_img">
+    <img src="images/room5.jpg" class="ss_img">
+  <div class="ss_content">
+    <h1>Rooms</h1><br>
+    <table cellpadding="25" align="center">
+      <tr>
+        <td>
+          <div class="room_card"><br><br>
+            <h3>3-Star Room</h3>
+            <h5>Starting Price: &#8377;42,000/Day</h5>
+            <h5>Resort: Available</h5>
+            <h5>Beach: Available</h5>
+          </div>
+        </td>
+        <td>
+          <div class="room_card"><br><br>
+            <h3>Luxury Suite</h3>
+            <h5>Starting Price: &#8377;72,000/Day</h5>
+            <h5>Resort: Available</h5>
+            <h5>Beach: Available</h5>
+          </div>
+        </td>
+        <td>
+          <div class="room_card"><br><br>
+            <h3>5-Star Room</h3>
+            <h5>Starting Price: &#8377;96,000/Day</h5>
+            <h5>Resort: Available</h5>
+            <h5>Beach: Available</h5>
+          </div>
+        </td>
+        <td>
+          <div class="room_card"><br><br>
+            <h3>Business Room</h3>
+            <h5>Starting Price: &#8377;1,00,000/Day</h5>
+            <h5>Resort: Available</h5>
+            <h5>Beach: Available</h5>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script>
+    var myIndex = 0;
+    slideShow();
+
+    function slideShow() {
+      var i;
+      var x = document.getElementsByClassName("ss_img");
+      for(i=0; i<x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if(myIndex>x.length) {myIndex=1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(slideShow, 5000);
+}
+</script>
+<div class="back4">
+  <h1>Aqualina Resort And Beach</h1>
+  <div class="row">
+    <div class="column">
+      <img src="images/resort1.jpg">
+      <img src="images/resort2.jpg">
+      <img src="images/resort3.jpg">
+      <img src="images/resort4.jpg">
+      <img src="images/resort5.jpg">
+    </div>
+    <div class="column">
+      <img src="images/resort6.jpg">
+      <img src="images/resort7.jpg">
+      <img src="images/resort8.jpg">
+      <img src="images/resort9.jpg">
+      <img src="images/resort10.jpg">
+    </div>
+    <div class="column">
+      <img src="images/resort11.jpg">
+      <img src="images/resort12.jpg">
+      <img src="images/resort13.jpg">
+      <img src="images/resort14.jpg">
+      <img src="images/resort15.jpg">
+    </div>
+    <div class="column">
+      <img src="images/resort16.jpg">
+      <img src="images/resort17.jpg">
+      <img src="images/resort18.jpg">
+      <img src="images/resort19.jpg">
+      <img src="images/resort20.jpg">
+    </div>
+  </div>
+</div>
+<div class="back5">
+  <h1>Premium Stay!</h1>
+  <table align="center" cellpadding="40">
+    <tr>
+      <td><img src="images/tick.png" height="300" width="300"></td>
+      <td align="left">
+        <ul>
+          <li>6 Days, 7 Nights Stay.</li>
+          <li>Full Resort And Beach Facilities.</li>
+          <li>Free Private Vehicles For Tour.</li>
+          <li>Free Food Of Your Choice.</li>
+          <li>Starting At Just &#8377;1,92,000 Only!</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="footer">
+  <div class="footer_1">
+    <h1 style="color: yellow;">AQUALINA</h1>
+    <p>Heaven Of Hotels And Resorts In The World!</p>
+    <h4>Live A Life.</h4>
+  </div>
+  <div class="footer_1">
+    <h4 style="color: yellow;">Explore</h4>
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">Founders</a>
+    <a href="">Views</a>
+    <a href="">Events</a>
+    <a href="">Partners</a>
+  </div>
+  <div class="footer_1">
+    <h4 style="color: yellow;">Career</h4>
+    <a href="">Internship</a>
+    <a href="">TieUps</a>
+    <a href="">Jobs</a>
+    <a href="">Partnership</a>
+    <a href="">Investor</a>
+  </div>
+  <div class="footer_1">
+    <h4 style="color: yellow;">Location</h4>
+    <p>Coney Island, Mumbai.<br>10KM Away From Mumbai Coast.</p>
+    <h4 style="color: yellow;">E-mail</h4>
+    <p>aqualina@gmail.com</p>
+  </div>
+  <div class="footer_1">
+    <h4 style="color: yellow;">Booking Via</h4>
+    <a href="">MakeMyTrip</a>
+    <a href="">GoIbibo</a>
+    <a href="">Trivago</a>
+    <a href="">Hotels</a>
+    <a href="">Agoda</a>
+  </div>
+  <div class="footer_2">
+    <p>&copy;Copyright 2018. Aqualina Hotel. All Rights Reserved.</p>
+  </div>
+  <div class="footer_3">
+    <a href="">Terms Of Use</a>
+    <a href="">Privacy Policy</a>
+    <a href="">Authorization</a>
+    <a href="">Copyright Claim</a>
+    <a href="">Complain</a>
+  </div>
+</div>
+</body>
+</html>
