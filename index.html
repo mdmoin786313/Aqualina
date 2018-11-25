@@ -6,9 +6,32 @@
   <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
   <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="header" id="header">
+<script>
+$(document).ready(function($) {
+  var doAnimations = function() {
+
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+</script>
+<div class="header animatable" id="header">
   <a href="">Aqualina</a>
   <div class="header_links">
     <a href="">Home</a>
@@ -31,7 +54,7 @@
   }
 </script>
 <div class="back1">
-  <div class="back1_content">
+  <div class="back1_content animatable">
     <h1>A Place You'd Like To Stay Forever!</h1>
     <h3 style="font-weight: lighter">Hotel. Resort. Beach. Everything You Need To Stay Here Forever.</h3>
     <a href="">Know More!</a>
@@ -41,14 +64,14 @@
   <h1>Facilities</h1>
   <table cellpadding="25" align="center">
     <tr>
-      <td><div class="back2_image"><div class="img1"></div></div><h4>Seafacing Rooms</h4></td>
-      <td><div class="back2_image"><div class="img2"></div></div><h4>Beach</h4></td>
-      <td><div class="back2_image"><div class="img3"></div></div><h4>Resort</h4></td>
+      <td><div class="back2_image animatable"><div class="img1"></div></div><h4 class="animatable">Seafacing Rooms</h4></td>
+      <td><div class="back2_image animatable"><div class="img2"></div></div><h4 class="animatable">Beach</h4></td>
+      <td><div class="back2_image animatable"><div class="img3"></div></div><h4 class="animatable">Resort</h4></td>
     </tr>
     <tr>
-      <td><div class="back2_image"><div class="img4"></div></div><h4>Private Vehicles</h4></td>
-      <td><div class="back2_image"><div class="img5"></div></div><h4>Island Hotel</h4></td>
-      <td><div class="back2_image"><div class="img6"></div></div><h4>Business Centre</h4></td>
+      <td><div class="back2_image animatable"><div class="img4"></div></div><h4 class="animatable">Private Vehicles</h4></td>
+      <td><div class="back2_image animatable"><div class="img5"></div></div><h4 class="animatable">Island Hotel</h4></td>
+      <td><div class="back2_image animatable"><div class="img6"></div></div><h4 class="animatable">Business Centre</h4></td>
     </tr>
   </table>
 </div>
@@ -63,7 +86,7 @@
     <table cellpadding="25" align="center">
       <tr>
         <td>
-          <div class="room_card"><br><br>
+          <div class="room_card animatable"><br><br>
             <h3>3-Star Room</h3>
             <h5>Starting Price: &#8377;42,000/Day</h5>
             <h5>Resort: Available</h5>
@@ -71,7 +94,7 @@
           </div>
         </td>
         <td>
-          <div class="room_card"><br><br>
+          <div class="room_card animatable"><br><br>
             <h3>Luxury Suite</h3>
             <h5>Starting Price: &#8377;72,000/Day</h5>
             <h5>Resort: Available</h5>
@@ -79,7 +102,7 @@
           </div>
         </td>
         <td>
-          <div class="room_card"><br><br>
+          <div class="room_card animatable"><br><br>
             <h3>5-Star Room</h3>
             <h5>Starting Price: &#8377;96,000/Day</h5>
             <h5>Resort: Available</h5>
@@ -87,7 +110,7 @@
           </div>
         </td>
         <td>
-          <div class="room_card"><br><br>
+          <div class="room_card animatable"><br><br>
             <h3>Business Room</h3>
             <h5>Starting Price: &#8377;1,00,000/Day</h5>
             <h5>Resort: Available</h5>
@@ -118,32 +141,32 @@
   <h1>Aqualina Resort And Beach</h1>
   <div class="row">
     <div class="column">
-      <img src="images/resort1.jpg">
-      <img src="images/resort2.jpg">
-      <img src="images/resort3.jpg">
-      <img src="images/resort4.jpg">
-      <img src="images/resort5.jpg">
+      <img src="images/resort1.jpg" class="animatable">
+      <img src="images/resort2.jpg" class="animatable">
+      <img src="images/resort3.jpg" class="animatable">
+      <img src="images/resort4.jpg" class="animatable">
+      <img src="images/resort5.jpg" class="animatable">
     </div>
     <div class="column">
-      <img src="images/resort6.jpg">
-      <img src="images/resort7.jpg">
-      <img src="images/resort8.jpg">
-      <img src="images/resort9.jpg">
-      <img src="images/resort10.jpg">
+      <img src="images/resort6.jpg" class="animatable">
+      <img src="images/resort7.jpg" class="animatable">
+      <img src="images/resort8.jpg" class="animatable">
+      <img src="images/resort9.jpg" class="animatable">
+      <img src="images/resort10.jpg" class="animatable">
     </div>
     <div class="column">
-      <img src="images/resort11.jpg">
-      <img src="images/resort12.jpg">
-      <img src="images/resort13.jpg">
-      <img src="images/resort14.jpg">
-      <img src="images/resort15.jpg">
+      <img src="images/resort11.jpg" class="animatable">
+      <img src="images/resort12.jpg" class="animatable">
+      <img src="images/resort13.jpg" class="animatable">
+      <img src="images/resort14.jpg" class="animatable">
+      <img src="images/resort15.jpg" class="animatable">
     </div>
     <div class="column">
-      <img src="images/resort16.jpg">
-      <img src="images/resort17.jpg">
-      <img src="images/resort18.jpg">
-      <img src="images/resort19.jpg">
-      <img src="images/resort20.jpg">
+      <img src="images/resort16.jpg" class="animatable">
+      <img src="images/resort17.jpg" class="animatable">
+      <img src="images/resort18.jpg" class="animatable">
+      <img src="images/resort19.jpg" class="animatable">
+      <img src="images/resort20.jpg" class="animatable">
     </div>
   </div>
 </div>
